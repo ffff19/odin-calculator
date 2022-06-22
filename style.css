@@ -1,0 +1,21 @@
+body {
+}
+
+.buttons {
+	font-family: 'Open Sans', sans-serif;
+	padding: 0.75em 2em;
+	text-decoration: none;
+	text-indent: 500px;
+	color: #FFAA48;
+	font-size: 24px;
+	border-radius: 0.3em;
+	display: inline;
+}
+
+.firstRow * {
+	width: 20.7px;
+}
+
+.fifthRow * {
+	width: 20.7px;
+}

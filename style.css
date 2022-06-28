@@ -1,15 +1,14 @@
 body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .buttons {
 	font-family: 'Open Sans', sans-serif;
-	padding: 0.75em 2em;
-	text-decoration: none;
-	text-indent: 500px;
 	color: #FFAA48;
 	font-size: 24px;
-	border-radius: 0.3em;
-	display: inline;
 }
 
 .firstRow * {
@@ -18,4 +17,13 @@ body {
 
 .fifthRow * {
 	width: 20.7px;
+}
+
+.display {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	border: 3px solid;
+}
+
+.container {
 }

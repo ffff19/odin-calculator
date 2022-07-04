@@ -28,143 +28,171 @@ function clickNumberOrOperator() {
 		clearDisplay();
 		displayValue += '7';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 7;
-		} else {
-			b = 7;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
-		}
+		if (operator == '') {
+			if (!Number.isInteger(a)) {
+				a = '7';
+			} else {
+				a += '7';
+			}
+		} else if (operator != '=') {
+				if (!Number.isInteger(b)) {
+					b = '7';
+				} else {
+					b += '7';
+				}
+			}
 	});
 
 	eight.addEventListener('click', e => {
 		clearDisplay();
 		displayValue += '8';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 8;
-		} else {
-			b = 8;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
-		}
+		if (operator == '') {
+			if (!Number.isInteger(a)) {
+				a = '8';
+			} else {
+				a += '8';
+			}
+		} else if (operator != '=') {
+				if (!Number.isInteger(b)) {
+					b = '8';
+				} else {
+					b += '8';
+				}
+			}
 	});
 
 	nine.addEventListener('click', e => {
 		clearDisplay();
 		displayValue += '9';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 9;
-		} else {
-			b = 9;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
-		}
+		if (operator == '') {
+			if (!Number.isInteger(a)) {
+				a = '9';
+			} else {
+				a += '9';
+			}
+		} else if (operator != '=') {
+				if (!Number.isInteger(b)) {
+					b = '9';
+				} else {
+					b += '9';
+				}
+			}
 	});
 
 	four.addEventListener('click', e => {
 		clearDisplay();
 		displayValue += '4';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 4;
-		} else {
-			b = 4;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
-		}
+		if (operator == '') {
+			if (!Number.isInteger(a)) {
+				a = '4';
+			} else {
+				a += '4';
+			}
+		} else if (operator != '=') {
+				if (!Number.isInteger(b)) {
+					b = '4';
+				} else {
+					b += '4';
+				}
+			}
 	});
 
 	five.addEventListener('click', e => {
 		clearDisplay();
 		displayValue += '5';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 5;
-		} else {
-			b = 5;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
-		}
+		if (operator == '') {
+			if (!Number.isInteger(a)) {
+				a = '5';
+			} else {
+				a += '5';
+			}
+		} else if (operator != '=') {
+				if (!Number.isInteger(b)) {
+					b = '5';
+				} else {
+					b += '5';
+				}
+			}
 	});
 
 	six.addEventListener('click', e => {
 		clearDisplay();
 		displayValue += '6';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 6;
-		} else {
-			b = 6;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
-		}
+		if (operator == '') {
+			if (!Number.isInteger(a)) {
+				a = '6';
+			} else {
+				a += '6';
+			}
+		} else if (operator != '=') {
+				if (!Number.isInteger(b)) {
+					b = '6';
+				} else {
+					b += '6';
+				}
+			}
 	});
+
 	one.addEventListener('click', e => {
 		clearDisplay();
 		displayValue += '1';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 1;
-		} else {
-			b = 1;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
-		}
+		if (operator == '') {
+			if (!Number.isInteger(a)) {
+				a = '1';
+			} else {
+				a += '1';
+			}
+		} else if (operator != '=') {
+				if (!Number.isInteger(b)) {
+					b = '1';
+				} else {
+					b += '1';
+				}
+			}
 	});
 
 	two.addEventListener('click', e => {
 		clearDisplay();
 		displayValue += '2';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 2;
-		} else {
-			b = 2;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
-		}
+		if (operator == '') {
+			if (!Number.isInteger(a)) {
+				a = '2';
+			} else {
+				a += '2';
+			}
+		} else if (operator != '=') {
+				if (!Number.isInteger(b)) {
+					b = '2';
+				} else {
+					b += '2';
+				}
+			}
 	});
 
 	three.addEventListener('click', e => {
 		clearDisplay();
 		displayValue += '3';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 3;
-		} else {
-			b = 3;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
-		}
+		if (operator == '') {
+			if (!Number.isInteger(a)) {
+				a = '3';
+			} else {
+				a += '3';
+			}
+		} else if (operator != '=') {
+				if (!Number.isInteger(b)) {
+					b = '3';
+				} else {
+					b += '3';
+				}
+			}
 	});
 
 	zero.addEventListener('click', e => {
@@ -220,6 +248,12 @@ function clickNumberOrOperator() {
 		operator = '-';
 	});
 
+	equal.addEventListener('click', e => {
+		clearDisplay();
+		a = displayValue = operate(a, b, operator);
+		fillDisplay(displayValue);
+		b = '';
+	});
 }
 
 function fillDisplay(value) {
@@ -237,7 +271,9 @@ function clearDisplay() {
 	display.removeChild(displayContent);
 }
 
-function doTheMath(a, b, operator) {
+function operate(a, b, operator) {
+	a = Number(a);
+	b = Number(b);
 	switch (operator) {
 		case '/':
 			return a / b;

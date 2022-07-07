@@ -1,7 +1,7 @@
 let displayValue = '';
 let a = '';
 let b = '';
-let operator;
+let operator = '';
 let divide = document.querySelector('.divide');
 let multiply = document.querySelector('.multiply');
 let subtract = document.querySelector('.subtract');
@@ -29,13 +29,13 @@ function clickNumberOrOperator() {
 		displayValue += '7';
 		fillDisplay(displayValue);
 		if (operator == '') {
-			if (!Number.isInteger(a)) {
+			if (a == '') {
 				a = '7';
 			} else {
 				a += '7';
 			}
 		} else if (operator != '=') {
-				if (!Number.isInteger(b)) {
+				if (b == '') {
 					b = '7';
 				} else {
 					b += '7';
@@ -48,13 +48,13 @@ function clickNumberOrOperator() {
 		displayValue += '8';
 		fillDisplay(displayValue);
 		if (operator == '') {
-			if (!Number.isInteger(a)) {
+			if (a == '') {
 				a = '8';
 			} else {
 				a += '8';
 			}
 		} else if (operator != '=') {
-				if (!Number.isInteger(b)) {
+				if (b == '') {
 					b = '8';
 				} else {
 					b += '8';
@@ -67,13 +67,13 @@ function clickNumberOrOperator() {
 		displayValue += '9';
 		fillDisplay(displayValue);
 		if (operator == '') {
-			if (!Number.isInteger(a)) {
+			if (a == '') {
 				a = '9';
 			} else {
 				a += '9';
 			}
 		} else if (operator != '=') {
-				if (!Number.isInteger(b)) {
+				if (b == '') {
 					b = '9';
 				} else {
 					b += '9';
@@ -86,13 +86,13 @@ function clickNumberOrOperator() {
 		displayValue += '4';
 		fillDisplay(displayValue);
 		if (operator == '') {
-			if (!Number.isInteger(a)) {
+			if (a == '') {
 				a = '4';
 			} else {
 				a += '4';
 			}
 		} else if (operator != '=') {
-				if (!Number.isInteger(b)) {
+				if (b == '') {
 					b = '4';
 				} else {
 					b += '4';
@@ -105,13 +105,13 @@ function clickNumberOrOperator() {
 		displayValue += '5';
 		fillDisplay(displayValue);
 		if (operator == '') {
-			if (!Number.isInteger(a)) {
+			if (a == '') {
 				a = '5';
 			} else {
 				a += '5';
 			}
 		} else if (operator != '=') {
-				if (!Number.isInteger(b)) {
+				if (b == '') {
 					b = '5';
 				} else {
 					b += '5';
@@ -124,13 +124,13 @@ function clickNumberOrOperator() {
 		displayValue += '6';
 		fillDisplay(displayValue);
 		if (operator == '') {
-			if (!Number.isInteger(a)) {
+			if (a == '') {
 				a = '6';
 			} else {
 				a += '6';
 			}
 		} else if (operator != '=') {
-				if (!Number.isInteger(b)) {
+				if (b == '') {
 					b = '6';
 				} else {
 					b += '6';
@@ -143,13 +143,13 @@ function clickNumberOrOperator() {
 		displayValue += '1';
 		fillDisplay(displayValue);
 		if (operator == '') {
-			if (!Number.isInteger(a)) {
+			if (a == '') {
 				a = '1';
 			} else {
 				a += '1';
 			}
 		} else if (operator != '=') {
-				if (!Number.isInteger(b)) {
+				if (b == '') {
 					b = '1';
 				} else {
 					b += '1';
@@ -162,13 +162,13 @@ function clickNumberOrOperator() {
 		displayValue += '2';
 		fillDisplay(displayValue);
 		if (operator == '') {
-			if (!Number.isInteger(a)) {
+			if (a == '') {
 				a = '2';
 			} else {
 				a += '2';
 			}
 		} else if (operator != '=') {
-				if (!Number.isInteger(b)) {
+				if (b == '') {
 					b = '2';
 				} else {
 					b += '2';
@@ -181,13 +181,13 @@ function clickNumberOrOperator() {
 		displayValue += '3';
 		fillDisplay(displayValue);
 		if (operator == '') {
-			if (!Number.isInteger(a)) {
+			if (a == '') {
 				a = '3';
 			} else {
 				a += '3';
 			}
 		} else if (operator != '=') {
-				if (!Number.isInteger(b)) {
+				if (b == '') {
 					b = '3';
 				} else {
 					b += '3';
@@ -199,15 +199,22 @@ function clickNumberOrOperator() {
 		clearDisplay();
 		displayValue += '0';
 		fillDisplay(displayValue);
-		if (!Number.isInteger(a)) {
-			a = 0;
-		} else {
-			b = 0;
-			clearDisplay();
-			a = displayValue = doTheMath(a, b, operator);
-			fillDisplay(displayValue);
-			b = '';
-			operator = '';
+		if (operator == '') {
+			if (a == '') {
+				a = '0';
+			} else if (a == '0') {
+					null;
+			} else {
+				a += '0'
+			}
+ 		} else if (operator != '=') {
+				if (b == '') {
+					b = '0';
+				} else if (Number(b) == 0) {
+					null;
+				} else {
+					b += '0';
+				}
 		}
 	});
 
@@ -221,6 +228,10 @@ function clickNumberOrOperator() {
 	});
 
 	divide.addEventListener('click', e => {
+		if (b != '') {
+			a = operate(a, b, operator);
+			b = '';
+		}
 		clearDisplay();
 		displayValue += '/';
 		fillDisplay(displayValue);
@@ -228,6 +239,10 @@ function clickNumberOrOperator() {
 	});
 
 	multiply.addEventListener('click', e => {
+		if (b != '') {
+			a = operate(a, b, operator);
+			b = '';
+		}
 		clearDisplay();
 		displayValue += 'x';
 		fillDisplay(displayValue);
@@ -235,6 +250,10 @@ function clickNumberOrOperator() {
 	});
 
 	add.addEventListener('click', e => {
+		if (b != '') {
+			a = operate(a, b, operator);
+			b = '';
+		}
 		clearDisplay();
 		displayValue += '+';
 		fillDisplay(displayValue);
@@ -242,6 +261,10 @@ function clickNumberOrOperator() {
 	});
 
 	subtract.addEventListener('click', e => {
+		if (b != '') {
+			a = operate(a, b, operator);
+			b = '';
+		}
 		clearDisplay();
 		displayValue += '-';
 		fillDisplay(displayValue);
@@ -249,10 +272,22 @@ function clickNumberOrOperator() {
 	});
 
 	equal.addEventListener('click', e => {
-		clearDisplay();
-		a = displayValue = operate(a, b, operator);
-		fillDisplay(displayValue);
-		b = '';
+		if (b == '') {
+			null;
+		} else if (b == '0' && operator == '/') {
+			clearDisplay();
+			displayValue = 'Division by zero attempted. ERR0R';
+			fillDisplay(displayValue);
+			b = '';
+	 } else {
+			clearDisplay();
+			a = displayValue = operate(a, b, operator);
+			if (a == 'Infinity') {
+				displayValue = 'Division by zero attempted. ERR0R';
+			}
+			fillDisplay(displayValue);
+			b = '';
+		}
 	});
 }
 
@@ -276,16 +311,16 @@ function operate(a, b, operator) {
 	b = Number(b);
 	switch (operator) {
 		case '/':
-			return a / b;
+			return (a / b);
 			break;
 		case 'x':
-			return a * b;
+			return (a * b);
 			break;
 		case '-':
-			return a - b;
+			return (a - b);
 			break;
 		case '+':
-			return a + b;
+			return (a + b);
 			break;
 	}
 }
